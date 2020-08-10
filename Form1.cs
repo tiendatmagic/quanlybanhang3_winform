@@ -105,7 +105,7 @@ namespace Quanlybanhang
             }
             if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                sql = "DELETE tblChatlieu WHERE Machatlieu=N'" + txtManhanvien.Text + "'";
+                sql = "DELETE tblNhanVien WHERE MaNhanVien=N'" + txtManhanvien.Text + "'";
                 Class.Functions.RunSqlDel(sql);
                 LoadDataGridView();
                 ResetValue();

@@ -24,3 +24,4 @@ D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.csproj.GenerateResource.c
 D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.csproj.CoreCompileInputs.cache
 D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.exe
 D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.pdb
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.Main.resources

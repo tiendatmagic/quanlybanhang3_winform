@@ -14,7 +14,7 @@ namespace Quanlybanhang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDMChatlieu());
+            Application.Run(new Main());
         }
     }
 }
