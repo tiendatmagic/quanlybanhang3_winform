@@ -45,9 +45,9 @@ namespace Quanlybanhang
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txtTennhanvien.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
+            if (txtTennhanvien.Text.Trim().Length == 0) //nếu chưa nhập tên nhân viên
             {
-                MessageBox.Show("Bạn chưa nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             sql = "UPDATE tblChatlieu SET Tenchatlieu=N'" +
@@ -85,22 +85,22 @@ namespace Quanlybanhang
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sql; //Lưu lệnh sql
-            if (txtManhanvien.Text.Trim().Length == 0) //Nếu chưa nhập mã chất liệu
+            if (txtManhanvien.Text.Trim().Length == 0) //Nếu chưa nhập mã nhân viên
             {
-                MessageBox.Show("Bạn phải nhập mã chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtManhanvien.Focus();
                 return;
             }
-            if (txtTennhanvien.Text.Trim().Length == 0) //Nếu chưa nhập tên chất liệu
+            if (txtTennhanvien.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
             {
-                MessageBox.Show("Bạn phải nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtTennhanvien.Focus();
                 return;
             }
             sql = "Select MaChatlieu From tblChatlieu where MaChatlieu=N'" + txtManhanvien.Text.Trim() + "'";
             if (Class.Functions.CheckKey(sql))
             {
-                MessageBox.Show("Mã chất liệu này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã nhân viên này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtManhanvien.Focus();
                 return;
             }
@@ -146,13 +146,21 @@ namespace Quanlybanhang
         private void LoadDataGridView()
         {
             string sql;
-            sql = "SELECT * FROM tblChatlieu";
+            sql = "SELECT * FROM tblNhanVien";
             tblCL = Class.Functions.GetDataToTable(sql); //Đọc dữ liệu từ bảng
             DataGridView.DataSource = tblCL; //Nguồn dữ liệu            
-            DataGridView.Columns[0].HeaderText = "Mã chất liệu";
-            DataGridView.Columns[1].HeaderText = "Tên chất liệu";
-            DataGridView.Columns[0].Width = 100;
-            DataGridView.Columns[1].Width = 300;
+            DataGridView.Columns[0].HeaderText = "Mã nhân viên";
+            DataGridView.Columns[1].HeaderText = "Tên nhân viên";
+            DataGridView.Columns[2].HeaderText = "Giới tính";
+            DataGridView.Columns[3].HeaderText = "Địa chỉ";
+            DataGridView.Columns[4].HeaderText = "Điện thoại";
+            DataGridView.Columns[5].HeaderText = "Ngày sinh";
+            DataGridView.Columns[0].Width = 1000;
+            DataGridView.Columns[1].Width = 100;
+            DataGridView.Columns[2].Width = 70;
+            DataGridView.Columns[3].Width = 100;
+            DataGridView.Columns[4].Width = 100;
+            DataGridView.Columns[5].Width = 100;
             DataGridView.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
             DataGridView.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp
         }
