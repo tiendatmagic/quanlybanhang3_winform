@@ -40,20 +40,50 @@ namespace Quanlybanhang
                 MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txtManhanvien.Text == "") //nếu chưa chọn bản ghi nào
+            if (txtManhanvien.Text.Trim().Length == 0) //Nếu chưa nhập mã nhân viên
             {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtManhanvien.Focus();
                 return;
             }
-            if (txtTennhanvien.Text.Trim().Length == 0) //nếu chưa nhập tên nhân viên
+            if (txtTennhanvien.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
             {
-                MessageBox.Show("Bạn chưa nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTennhanvien.Focus();
                 return;
             }
-            sql = "UPDATE tblChatlieu SET Tenchatlieu=N'" +
-                txtTennhanvien.Text.ToString() +
-                "' WHERE Machatlieu=N'" + txtManhanvien.Text + "'";
-            Class.Functions.RunSQL(sql);
+            if (txtDiachi.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
+            {
+                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDiachi.Focus();
+                return;
+            }
+            if (txtDienthoai.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
+            {
+                MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDienthoai.Focus();
+                return;
+            }
+            if (rbnam.Checked == true)
+            {
+                sql = ("UPDATE tblNhanVien SET TenNhanVien=N'" + txtTennhanvien.Text + "' WHERE MaNhanVien=N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET GioiTinh = N'" + "Nam" + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET Diachi = N'" + txtDiachi.Text + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET DienThoai = N'" + txtDienthoai.Text + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET NgaySinh = N'" + dateTimePicker1.Value + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'");
+                Class.Functions.RunSQL(sql);
+            }
+            if (rbnu.Checked == true)
+            {
+                sql = ("UPDATE tblNhanVien SET TenNhanVien=N'" + txtTennhanvien.Text + "' WHERE MaNhanVien=N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET GioiTinh = N'" + "Nữ" + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET Diachi = N'" + txtDiachi.Text + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET DienThoai = N'" + txtDienthoai.Text + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'" +
+            "UPDATE tblNhanVien SET NgaySinh = N'" + dateTimePicker1.Value + "' WHERE MaNhanVien = N'" + txtManhanvien.Text + "'");
+                Class.Functions.RunSQL(sql);
+            }
+
+           
             LoadDataGridView();
             ResetValue();
 
@@ -101,13 +131,13 @@ namespace Quanlybanhang
             }
             if (txtDiachi.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
             {
-                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDiachi.Focus();
                 return;
             }
             if (txtDienthoai.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
             {
-                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDienthoai.Focus();
                 return;
             }
@@ -152,7 +182,7 @@ namespace Quanlybanhang
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
-            txtManhanvien.Enabled = false;
+            
         }
 
         private void btnDong_Click(object sender, EventArgs e)
