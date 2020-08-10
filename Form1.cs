@@ -84,6 +84,8 @@ namespace Quanlybanhang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            
+
             string sql; //Lưu lệnh sql
             if (txtManhanvien.Text.Trim().Length == 0) //Nếu chưa nhập mã nhân viên
             {
@@ -97,16 +99,40 @@ namespace Quanlybanhang
                 txtTennhanvien.Focus();
                 return;
             }
-            sql = "Select MaChatlieu From tblChatlieu where MaChatlieu=N'" + txtManhanvien.Text.Trim() + "'";
+            if (txtDiachi.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
+            {
+                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDiachi.Focus();
+                return;
+            }
+            if (txtDienthoai.Text.Trim().Length == 0) //Nếu chưa nhập tên nhân viên
+            {
+                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDienthoai.Focus();
+                return;
+            }
+
+            sql = "Select MaNhanVien From tblNhanVien where MaNhanVien=N'" + txtManhanvien.Text.Trim() + "'";
             if (Class.Functions.CheckKey(sql))
             {
                 MessageBox.Show("Mã nhân viên này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtManhanvien.Focus();
                 return;
             }
+            if (rbnam.Checked == true)
+            {
+                sql = "INSERT INTO tblNhanVien VALUES(N'" +
+                txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "',N'" + "Nam" + "',N'" + txtDiachi.Text + "',N'" + txtDienthoai.Text + "',N'" + dateTimePicker1.Value + "')";
 
-            sql = "INSERT INTO tblChatlieu VALUES(N'" +
-                txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "')";
+            }
+
+            if (rbnu.Checked == true)
+            {
+                sql = "INSERT INTO tblNhanVien VALUES(N'" +
+                txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "',N'" + "Nữ" + "',N'" + txtDiachi.Text + "',N'" + txtDienthoai.Text + "',N'" + dateTimePicker1.Value + "')";
+
+            }
+
             Class.Functions.RunSQL(sql); //Thực hiện câu lệnh sql
             LoadDataGridView(); //Nạp lại DataGridView
             ResetValue();
@@ -115,7 +141,7 @@ namespace Quanlybanhang
             btnSua.Enabled = true;
             btnBoqua.Enabled = false;
             btnLuu.Enabled = false;
-            txtManhanvien.Enabled = false;
+            
         }
 
         private void btnBoqua_Click(object sender, EventArgs e)
@@ -136,11 +162,13 @@ namespace Quanlybanhang
 
         private void frmDMChatlieu_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("© 2020 Copyright by Tiendatmagic - All Rights Reserved ");
             Functions.Connect();
             txtManhanvien.Enabled = true;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
             LoadDataGridView();
+            
         }
 
         private void LoadDataGridView()
@@ -155,8 +183,8 @@ namespace Quanlybanhang
             DataGridView.Columns[3].HeaderText = "Địa chỉ";
             DataGridView.Columns[4].HeaderText = "Điện thoại";
             DataGridView.Columns[5].HeaderText = "Ngày sinh";
-            DataGridView.Columns[0].Width = 1000;
-            DataGridView.Columns[1].Width = 100;
+            DataGridView.Columns[0].Width = 100;
+            DataGridView.Columns[1].Width = 130;
             DataGridView.Columns[2].Width = 70;
             DataGridView.Columns[3].Width = 100;
             DataGridView.Columns[4].Width = 100;
@@ -173,6 +201,9 @@ namespace Quanlybanhang
         {
             txtManhanvien.Text = "";
             txtTennhanvien.Text = "";
+            txtDiachi.Text = "";
+            txtDienthoai.Text = "";
+
         }
 
 

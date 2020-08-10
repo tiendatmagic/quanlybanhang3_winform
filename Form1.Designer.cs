@@ -44,8 +44,8 @@
             this.txtDienthoai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbnam = new System.Windows.Forms.RadioButton();
+            this.rbnu = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
@@ -203,8 +203,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbnu);
+            this.groupBox1.Controls.Add(this.rbnam);
             this.groupBox1.Location = new System.Drawing.Point(27, 99);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(233, 42);
@@ -212,27 +212,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giới tính:";
             // 
-            // radioButton1
+            // rbnam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(81, 16);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbnam.AutoSize = true;
+            this.rbnam.Location = new System.Drawing.Point(81, 16);
+            this.rbnam.Name = "rbnam";
+            this.rbnam.Size = new System.Drawing.Size(47, 17);
+            this.rbnam.TabIndex = 0;
+            this.rbnam.TabStop = true;
+            this.rbnam.Text = "Nam";
+            this.rbnam.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbnu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(184, 16);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbnu.AutoSize = true;
+            this.rbnu.Location = new System.Drawing.Point(184, 16);
+            this.rbnu.Name = "rbnu";
+            this.rbnu.Size = new System.Drawing.Size(39, 17);
+            this.rbnu.TabIndex = 1;
+            this.rbnu.TabStop = true;
+            this.rbnu.Text = "Nữ";
+            this.rbnu.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -276,7 +276,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDMChatlieu";
-            this.Text = "Form1";
+            this.Text = "Quản lý bán hàng";
             this.Load += new System.EventHandler(this.frmDMChatlieu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -304,8 +304,8 @@
         private System.Windows.Forms.TextBox txtDienthoai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbnu;
+        private System.Windows.Forms.RadioButton rbnam;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
