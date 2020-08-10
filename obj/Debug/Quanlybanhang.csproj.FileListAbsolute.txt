@@ -1,0 +1,17 @@
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\obj\Debug\Quanlybanhang.csprojAssemblyReference.cache
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\obj\Debug\Quanlybanhang.frmDMChatlieu.resources
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\obj\Debug\Quanlybanhang.Properties.Resources.resources
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\obj\Debug\Quanlybanhang.csproj.GenerateResource.cache
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\obj\Debug\Quanlybanhang.csproj.CoreCompileInputs.cache
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\bin\Debug\Quanlybanhang.exe
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\bin\Debug\Quanlybanhang.pdb
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\obj\Debug\Quanlybanhang.exe
+C:\Users\tiend\OneDrive\ado\a\Quanlybanhang\Quanlybanhang\obj\Debug\Quanlybanhang.pdb
+D:\quanlybanhang\obj\Debug\Quanlybanhang.exe
+D:\quanlybanhang\obj\Debug\Quanlybanhang.pdb
+D:\quanlybanhang\bin\Debug\Quanlybanhang.exe
+D:\quanlybanhang\bin\Debug\Quanlybanhang.pdb
+D:\quanlybanhang\obj\Debug\Quanlybanhang.csprojResolveAssemblyReference.cache
+D:\quanlybanhang\obj\Debug\Quanlybanhang.frmDMChatlieu.resources
+D:\quanlybanhang\obj\Debug\Quanlybanhang.Properties.Resources.resources
+D:\quanlybanhang\obj\Debug\Quanlybanhang.csproj.GenerateResource.Cache
