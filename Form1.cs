@@ -28,8 +28,8 @@ namespace Quanlybanhang
             btnThem.Enabled = true;
             btnThem.Enabled = false;
             ResetValue(); //Xoá trắng các textbox
-            txtMachatlieu.Enabled = true; //cho phép nhập mới
-            txtMachatlieu.Focus();
+            txtManhanvien.Enabled = true; //cho phép nhập mới
+            txtManhanvien.Focus();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -40,19 +40,19 @@ namespace Quanlybanhang
                 MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txtMachatlieu.Text == "") //nếu chưa chọn bản ghi nào
+            if (txtManhanvien.Text == "") //nếu chưa chọn bản ghi nào
             {
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txtTenchatlieu.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
+            if (txtTennhanvien.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
             {
                 MessageBox.Show("Bạn chưa nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             sql = "UPDATE tblChatlieu SET Tenchatlieu=N'" +
-                txtTenchatlieu.Text.ToString() +
-                "' WHERE Machatlieu=N'" + txtMachatlieu.Text + "'";
+                txtTennhanvien.Text.ToString() +
+                "' WHERE Machatlieu=N'" + txtManhanvien.Text + "'";
             Class.Functions.RunSQL(sql);
             LoadDataGridView();
             ResetValue();
@@ -68,14 +68,14 @@ namespace Quanlybanhang
                 MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txtMachatlieu.Text == "") //nếu chưa chọn bản ghi nào
+            if (txtManhanvien.Text == "") //nếu chưa chọn bản ghi nào
             {
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                sql = "DELETE tblChatlieu WHERE Machatlieu=N'" + txtMachatlieu.Text + "'";
+                sql = "DELETE tblChatlieu WHERE Machatlieu=N'" + txtManhanvien.Text + "'";
                 Class.Functions.RunSqlDel(sql);
                 LoadDataGridView();
                 ResetValue();
@@ -85,28 +85,28 @@ namespace Quanlybanhang
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sql; //Lưu lệnh sql
-            if (txtMachatlieu.Text.Trim().Length == 0) //Nếu chưa nhập mã chất liệu
+            if (txtManhanvien.Text.Trim().Length == 0) //Nếu chưa nhập mã chất liệu
             {
                 MessageBox.Show("Bạn phải nhập mã chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMachatlieu.Focus();
+                txtManhanvien.Focus();
                 return;
             }
-            if (txtTenchatlieu.Text.Trim().Length == 0) //Nếu chưa nhập tên chất liệu
+            if (txtTennhanvien.Text.Trim().Length == 0) //Nếu chưa nhập tên chất liệu
             {
                 MessageBox.Show("Bạn phải nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTenchatlieu.Focus();
+                txtTennhanvien.Focus();
                 return;
             }
-            sql = "Select MaChatlieu From tblChatlieu where MaChatlieu=N'" + txtMachatlieu.Text.Trim() + "'";
+            sql = "Select MaChatlieu From tblChatlieu where MaChatlieu=N'" + txtManhanvien.Text.Trim() + "'";
             if (Class.Functions.CheckKey(sql))
             {
                 MessageBox.Show("Mã chất liệu này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtMachatlieu.Focus();
+                txtManhanvien.Focus();
                 return;
             }
 
             sql = "INSERT INTO tblChatlieu VALUES(N'" +
-                txtMachatlieu.Text + "',N'" + txtTenchatlieu.Text + "')";
+                txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "')";
             Class.Functions.RunSQL(sql); //Thực hiện câu lệnh sql
             LoadDataGridView(); //Nạp lại DataGridView
             ResetValue();
@@ -115,7 +115,7 @@ namespace Quanlybanhang
             btnSua.Enabled = true;
             btnBoqua.Enabled = false;
             btnLuu.Enabled = false;
-            txtMachatlieu.Enabled = false;
+            txtManhanvien.Enabled = false;
         }
 
         private void btnBoqua_Click(object sender, EventArgs e)
@@ -126,7 +126,7 @@ namespace Quanlybanhang
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
-            txtMachatlieu.Enabled = false;
+            txtManhanvien.Enabled = false;
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace Quanlybanhang
         private void frmDMChatlieu_Load(object sender, EventArgs e)
         {
             Functions.Connect();
-            txtMachatlieu.Enabled = true;
+            txtManhanvien.Enabled = true;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
             LoadDataGridView();
@@ -163,8 +163,8 @@ namespace Quanlybanhang
 
         private void ResetValue()
         {
-            txtMachatlieu.Text = "";
-            txtTenchatlieu.Text = "";
+            txtManhanvien.Text = "";
+            txtTennhanvien.Text = "";
         }
 
 
@@ -180,7 +180,7 @@ namespace Quanlybanhang
             if (btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMachatlieu.Focus();
+                txtManhanvien.Focus();
                 return;
             }
             if (tblCL.Rows.Count == 0) //Nếu không có dữ liệu
@@ -188,8 +188,8 @@ namespace Quanlybanhang
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            txtMachatlieu.Text = DataGridView.CurrentRow.Cells["Machatlieu"].Value.ToString();
-            txtTenchatlieu.Text = DataGridView.CurrentRow.Cells["Tenchatlieu"].Value.ToString();
+            txtManhanvien.Text = DataGridView.CurrentRow.Cells["Machatlieu"].Value.ToString();
+            txtTennhanvien.Text = DataGridView.CurrentRow.Cells["Tenchatlieu"].Value.ToString();
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnBoqua.Enabled = true;

@@ -15,3 +15,12 @@ D:\quanlybanhang\obj\Debug\Quanlybanhang.csprojResolveAssemblyReference.cache
 D:\quanlybanhang\obj\Debug\Quanlybanhang.frmDMChatlieu.resources
 D:\quanlybanhang\obj\Debug\Quanlybanhang.Properties.Resources.resources
 D:\quanlybanhang\obj\Debug\Quanlybanhang.csproj.GenerateResource.Cache
+D:\xdpmql\quanlybanhang3_wform\bin\Debug\Quanlybanhang.exe
+D:\xdpmql\quanlybanhang3_wform\bin\Debug\Quanlybanhang.pdb
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.csprojAssemblyReference.cache
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.frmDMChatlieu.resources
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.Properties.Resources.resources
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.csproj.GenerateResource.cache
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.csproj.CoreCompileInputs.cache
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.exe
+D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.pdb
