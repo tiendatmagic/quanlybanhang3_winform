@@ -108,7 +108,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Quanlybanhang.Properties.Resources._68747470733a2f2f63646e2e676c697463682e636f6d2f61363761666338312d353433382d343138622d613937622d3762623130633764346366342532467469656e6461746d61676963632e706e673f763d31353935393836333332343239;
-            this.pictureBox1.Location = new System.Drawing.Point(351, 106);
+            this.pictureBox1.Location = new System.Drawing.Point(303, 116);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(437, 249);
             this.pictureBox1.TabIndex = 3;
