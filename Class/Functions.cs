@@ -16,7 +16,7 @@ namespace Quanlybanhang.Class
 
         public static void Connect()
         {
-            conn = new SqlConnection("Data Source=./;Initial Catalog=quanlybanhangahihi;Integrated Security=True");
+            conn = new SqlConnection("Data Source=DESKTOP-UHFFQTA;Initial Catalog=quanlybanhangahihi;Integrated Security=True");
             conn.Open();
             if (conn.State == ConnectionState.Open)
                 MessageBox.Show("Kết nối thành công");

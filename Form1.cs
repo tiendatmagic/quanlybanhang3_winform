@@ -149,18 +149,28 @@ namespace Quanlybanhang
                 txtManhanvien.Focus();
                 return;
             }
-            if (rbnam.Checked == true)
-            {
-                sql = "INSERT INTO tblNhanVien VALUES(N'" +
-                txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "',N'" + "Nam" + "',N'" + txtDiachi.Text + "',N'" + txtDienthoai.Text + "',N'" + dateTimePicker1.Value + "')";
 
+            if (rbnam.Checked == false && rbnu.Checked == false)
+            {
+                MessageBox.Show("Null");
             }
-
-            if (rbnu.Checked == true)
+            else
             {
-                sql = "INSERT INTO tblNhanVien VALUES(N'" +
-                txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "',N'" + "Nữ" + "',N'" + txtDiachi.Text + "',N'" + txtDienthoai.Text + "',N'" + dateTimePicker1.Value + "')";
 
+
+                if (rbnam.Checked == true)
+                {
+                    sql = "INSERT INTO tblNhanVien VALUES(N'" +
+                    txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "',N'" + "Nam" + "',N'" + txtDiachi.Text + "',N'" + txtDienthoai.Text + "',N'" + dateTimePicker1.Value + "')";
+
+                }
+
+                if (rbnu.Checked == true)
+                {
+                    sql = "INSERT INTO tblNhanVien VALUES(N'" +
+                    txtManhanvien.Text + "',N'" + txtTennhanvien.Text + "',N'" + "Nữ" + "',N'" + txtDiachi.Text + "',N'" + txtDienthoai.Text + "',N'" + dateTimePicker1.Value + "')";
+
+                }
             }
 
             Class.Functions.RunSQL(sql); //Thực hiện câu lệnh sql

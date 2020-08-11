@@ -25,3 +25,13 @@ D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.csproj.CoreCompileInputs.
 D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.exe
 D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.pdb
 D:\xdpmql\quanlybanhang3_wform\obj\Debug\Quanlybanhang.Main.resources
+C:\temp\quanlybanhang3_winform\bin\Debug\Quanlybanhang.exe
+C:\temp\quanlybanhang3_winform\bin\Debug\Quanlybanhang.pdb
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.csprojAssemblyReference.cache
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.frmDMChatlieu.resources
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.Main.resources
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.Properties.Resources.resources
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.csproj.GenerateResource.cache
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.csproj.CoreCompileInputs.cache
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.exe
+C:\temp\quanlybanhang3_winform\obj\Debug\Quanlybanhang.pdb
